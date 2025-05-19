@@ -1,0 +1,146 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Types Pokémon */
+.type-insecte {
+  background: linear-gradient(135deg, #d4ff9c 0%, #e2ffb8 100%);
+}
+
+.type-roche {
+  background: linear-gradient(135deg, #d6d3d1 0%, #e7e5e4 100%);
+}
+
+.type-sol {
+  background: linear-gradient(135deg, #fde68a 0%, #fffbeb 100%);
+}
+
+.type-acier {
+  background: linear-gradient(135deg, #cbd5e1 0%, #e2e8f0 100%);
+}
+
+.type-glace {
+  background: linear-gradient(135deg, #67e8f9 0%, #cffafe 100%);
+}
+
+.type-vol {
+  background: linear-gradient(135deg, #7dd3fc 0%, #e0f2fe 100%);
+}
+
+/* Reset et styles de base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #1e293b;
+  min-height: 100vh;
+  font-family: system-ui, -apple-system, sans-serif;
+}
+
+/* Conteneurs */
+.container {
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 1.5rem;
+}
+
+/* Grille */
+.grid {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(1, 1fr);
+}
+
+@media (min-width: 640px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (min-width: 1280px) {
+  .grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/* Cartes */
+.card {
+  background: white;
+  border-radius: 0.75rem;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  overflow: hidden;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+/* Sections */
+.section {
+  background-color: #334155;
+  border-radius: 0.75rem;
+  margin: 5rem auto;
+  max-width: 64rem;
+  padding: 2rem;
+}
+
+.section-title {
+  color: white;
+  font-size: 1.875rem;
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+}
+
+.section-text {
+  color: #e2e8f0;
+  font-size: 1.125rem;
+  line-height: 1.75;
+}
+
+/* Footer */
+.footer {
+  background-color: #0f172a;
+  color: #94a3b8;
+  padding: 2.5rem;
+  text-align: center;
+  margin-top: 5rem;
+}
+
+/* Navigation */
+.nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 50;
+  background: linear-gradient(to right, #facc15, #facc15, #3b82f6);
+  color: white;
+  padding: 1rem;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(8px);
+  background-opacity: 0.9;
+}
+
+/* Boutons */
+.btn {
+  background-color: #facc15;
+  color: #1e293b;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  font-weight: 500;
+  transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #f59e0b;
+}
